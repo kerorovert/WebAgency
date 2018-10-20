@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
     font-family: Roboto,"Trebuchet MS",sans-serif;
@@ -57,10 +58,13 @@ ul{
 nav{
     position: fixed;
     padding-left: 50%;
-    animation: navb 0.5s ease-in-out; 
+    -webkit-animation: navb 0.5s ease-in-out;
+            animation: navb 0.5s ease-in-out; 
 }
 nav a{
     font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 40px 15px;   
     color: black;         
@@ -73,7 +77,8 @@ nav li{
     float: left;          
 }
 nav a:hover{
-    animation: upline 0.15s forwards ease-in-out; 
+    -webkit-animation: upline 0.15s forwards ease-in-out;
+            animation: upline 0.15s forwards ease-in-out; 
 }
 header{
     background-color: #fff;
@@ -81,30 +86,45 @@ header{
     left: 0px;
     width: 100%;
     position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    align-items: center; 
-    justify-content: center;
+    -webkit-box-align: center; 
+        -ms-flex-align: center; 
+            align-items: center; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center;
     height: 99px;
     z-index: 1000;
-    box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.02);
-    animation: headerb 0.5s ease-in-out;
+    -webkit-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.02);
+            box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.02);
+    -webkit-animation: headerb 0.5s ease-in-out;
+            animation: headerb 0.5s ease-in-out;
 }
 .logo{
     padding: 4px;
     margin-right: 50%;
-    animation: logob 0.5s ease-in-out;
+    -webkit-animation: logob 0.5s ease-in-out;
+            animation: logob 0.5s ease-in-out;
 }
 #sliderlow{
     margin-top: 65px;
     display: none;
-    box-shadow: 0px 15px 30px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 15px 30px 0px rgba(0,0,0,1);
+            box-shadow: 0px 15px 30px 0px rgba(0,0,0,1);
 }
 .title{
     background-image: url("webagency_images/images/animated-number/bg.jpg");
     width: auto;
     color: white;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 100px 5%;
 }
 .fleche_gauche, .fleche_droite{
@@ -138,22 +158,27 @@ header{
     right: 10px;
 }
 .slider{
-    animation: slider 0.5s forwards ease-in-out;
+    -webkit-animation: slider 0.5s forwards ease-in-out;
+            animation: slider 0.5s forwards ease-in-out;
     height: 0px;
     max-width: 1600px;
     width: 100%;
     overflow: hidden;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin: 0 auto;
     margin-top: 99px;
     margin-bottom: 0px;
     position: relative;
-    box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.1);
+            box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.1);
 }
 .slides{
     height: 550px;
     width: 3200px;
-    animation: glisse 18s infinite ease-in-out;
+    -webkit-animation: glisse 18s infinite ease-in-out;
+            animation: glisse 18s infinite ease-in-out;
 }
 .slide{
     float: left;
@@ -173,16 +198,25 @@ header{
     font-size: 16px;
     width: 125px;
     height: 45px;     
+    display: -webkit-box;     
+    display: -ms-flexbox;     
     display: flex;          
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;          
+        -ms-flex-pack: center;          
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: #fff;
     background: #4EB1D5;
     border-radius: 2px;
-    box-shadow: 0 4px 0 #4e8daa;
+    -webkit-box-shadow: 0 4px 0 #4e8daa;
+            box-shadow: 0 4px 0 #4e8daa;
 }
 .bouton:active{
-     box-shadow: 1px 1px 10px black inset, 
+     -webkit-box-shadow: 1px 1px 10px black inset, 
+                 0 1px 0 rgba( 255, 255, 255, 0.4);
+             box-shadow: 1px 1px 10px black inset, 
                  0 1px 0 rgba( 255, 255, 255, 0.4);
 }
 #timeline{
@@ -192,8 +226,10 @@ header{
     height: 3px;
     background: #4EB1D5;
     width: 0;
-    animation: glisse 18s infinite;
-    animation: timeliner 18s infinite linear;
+    -webkit-animation: glisse 18s infinite;
+            animation: glisse 18s infinite;
+    -webkit-animation: timeliner 18s infinite linear;
+            animation: timeliner 18s infinite linear;
     z-index: 20;
 }
 #timelineback{
@@ -242,8 +278,13 @@ header{
 }
 .icos{
     font-size: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-direction: column; 
+    -webkit-box-orient: vertical; 
+    -webkit-box-direction: normal; 
+        -ms-flex-direction: column; 
+            flex-direction: column; 
     float: left; 
     margin: 30px;
     padding: 10px;
@@ -258,7 +299,9 @@ header{
     background-color: #4EB1D5;
     border-radius: 50%;
     position: absolute;
-    transform: translate(20%,50%);
+    -webkit-transform: translate(20%,50%);
+        -ms-transform: translate(20%,50%);
+            transform: translate(20%,50%);
 }
 #contserv{
     max-width: 770px;
@@ -269,10 +312,19 @@ header{
 .selector{
     width: 125px;
     height: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 13px;
     font-size: 0.9em;
     font-weight: 700;
@@ -281,12 +333,16 @@ header{
 }
 .selector:hover{
     background-color: #4EB1D5;
-    box-shadow: inset 0px -3px #4E8DAA;
+    -webkit-box-shadow: inset 0px -3px #4E8DAA;
+            box-shadow: inset 0px -3px #4E8DAA;
 }
 .selector:first-child{
     background-color: #4EB1D5;
-    box-shadow: inset 0px -3px #4E8DAA;
-    visibility: initial;
+    -webkit-box-shadow: inset 0px -3px #4E8DAA;
+            box-shadow: inset 0px -3px #4E8DAA;
+}
+.selector:hover i, .selector:first-child i{
+    visibility: visible;
 }
 li i{
     color: #4E8DAA;
@@ -294,9 +350,14 @@ li i{
     visibility: hidden;
 }
 .wraper{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center;
+    -ms-flex-wrap: wrap; 
+        flex-wrap: wrap; 
+    -webkit-box-pack: center; 
+        -ms-flex-pack: center; 
+            justify-content: center;
 }
 .works img{
     max-width: 312px;
@@ -314,11 +375,15 @@ figcaption{
     color: white;
     background: rgba(0,0,0,0.4);
     opacity: 0;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
     transition: opacity .5s;
     width: 100%;
 }
 figure:hover figcaption{
     opacity: 1;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
     transition: opacity .5s;
 }
 .eye{
@@ -362,7 +427,10 @@ form{
     right: 10%;
     top: 10%;
     z-index: 2;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 #pointile {
     border-bottom-style: dotted;
@@ -384,12 +452,32 @@ input, textarea{
 }
 
 /*Keyframes*/
-@keyframes glisse{
+@-webkit-keyframes glisse{
     0%, 40%, 100% {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
     50%, 90% {
-        transform: translateX(-1600px);
+        -webkit-transform: translateX(-1600px);
+                transform: translateX(-1600px);
+    }
+}
+@keyframes glisse{
+    0%, 40%, 100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    50%, 90% {
+        -webkit-transform: translateX(-1600px);
+                transform: translateX(-1600px);
+    }
+}
+@-webkit-keyframes timeliner{
+    0%, 40.0001%, 50%, 90.0001%, 100% { 
+        width: 0; 
+    }
+    40%, 90% { 
+        width: 100%; 
     }
 }
 @keyframes timeliner{
@@ -398,6 +486,16 @@ input, textarea{
     }
     40%, 90% { 
         width: 100%; 
+    }
+}
+@-webkit-keyframes upline{
+    from{
+        padding: 40px 15px;
+        border-top: 0px solid #4EB1D5;
+    }
+    to{
+        border-top: 3px solid #4EB1D5;
+        padding: 37px 15px;   
     }
 }
 @keyframes upline{
@@ -410,9 +508,22 @@ input, textarea{
         padding: 37px 15px;   
     }
 }
+@-webkit-keyframes header{
+    to{
+        height: 65px;   
+    }
+}
 @keyframes header{
     to{
         height: 65px;   
+    }
+}
+@-webkit-keyframes headerb{
+    from{
+        height: 65px;
+    }
+    to{
+        height: 99px;   
     }
 }
 @keyframes headerb{
@@ -423,30 +534,76 @@ input, textarea{
         height: 99px;   
     }
 }
-@keyframes navb{
+@-webkit-keyframes navb{
     from{
-        transform: translateY(-99px);
+        -webkit-transform: translateY(-99px);
+                transform: translateY(-99px);
     }
     to{
-        transform: translateY(0px); 
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px); 
+    }
+}
+@keyframes navb{
+    from{
+        -webkit-transform: translateY(-99px);
+                transform: translateY(-99px);
+    }
+    to{
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px); 
+    }
+}
+@-webkit-keyframes nav{
+    from{
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    to{
+        -webkit-transform: translateY(-99px);
+                transform: translateY(-99px);
     }
 }
 @keyframes nav{
     from{
-        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
     }
     to{
-        transform: translateY(-99px);
+        -webkit-transform: translateY(-99px);
+                transform: translateY(-99px);
+    }
+}
+@-webkit-keyframes slider{
+    from{
+        height: 0px;
+        -webkit-transform: translateY(-34px);
+                transform: translateY(-34px);
+    }
+    to{
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+        height: 550px;   
     }
 }
 @keyframes slider{
     from{
         height: 0px;
-        transform: translateY(-34px);
+        -webkit-transform: translateY(-34px);
+                transform: translateY(-34px);
     }
     to{
-        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
         height: 550px;   
+    }
+}
+@-webkit-keyframes logo{
+    from{
+        margin-right: 50%;
+    }
+    to{
+        margin: 0;
     }
 }
 @keyframes logo{
@@ -455,6 +612,14 @@ input, textarea{
     }
     to{
         margin: 0;
+    }
+}
+@-webkit-keyframes logob{
+    from{
+        margin: 0;
+    }
+    to{
+        margin-right: 50%;
     }
 }
 @keyframes logob{
@@ -468,19 +633,22 @@ input, textarea{
 /*Media queries*/
 @media screen and (max-width: 1023px){
     .logo{
-        animation: logo 0.5s forwards ease-in-out;
+        -webkit-animation: logo 0.5s forwards ease-in-out;
+                animation: logo 0.5s forwards ease-in-out;
     }
     nav,.slider, iframe, #blueblock, .space{
         display: none;
     }
     nav{
-        animation: nav 0.5s ease-in-out;
+        -webkit-animation: nav 0.5s ease-in-out;
+                animation: nav 0.5s ease-in-out;
     }
     #sliderlow{
         display: block;
     }
     header{
-        animation: header 0.5s forwards ease-in-out;
+        -webkit-animation: header 0.5s forwards ease-in-out;
+                animation: header 0.5s forwards ease-in-out;
     }
     h2{
         padding-top: 65px;
@@ -501,15 +669,22 @@ input, textarea{
     }
     .divserv{
         text-align: center;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         text-align: justify;
         margin: 0 20px;
     }
 }
 @media screen and (max-width: 510px){
     #nosprojets ul{
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     }
     .selector:first-child{
         border-bottom-left-radius: 0px;
