@@ -362,7 +362,6 @@ li i{
 .works img{
     max-width: 312px;
     max-height: 210px;
-    width: 100%;
 }
 figure{
     position: relative;
@@ -676,7 +675,7 @@ input, textarea{
         margin: 0 20px;
     }
 }
-@media screen and (max-width: 510px){
+@media screen and (max-width: 520px){
     #nosprojets ul{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -693,5 +692,8 @@ input, textarea{
     .selector:last-child{
         border-bottom-left-radius: 5px;
         border-top-right-radius: 0px;
+    }
+    .selector:hover i, .selector:first-child i{
+    visibility: hidden;
     }   
 }
