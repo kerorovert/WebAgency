@@ -375,8 +375,8 @@ figcaption{
     background: rgba(0,0,0,0.4);
     opacity: 0;
     -webkit-transition: opacity .5s;
-    -o-transition: opacity .5s;
-    transition: opacity .5s;
+         -o-transition: opacity .5s;
+            transition: opacity .5s;
     width: 100%;
 }
 figure:hover figcaption{
@@ -397,12 +397,10 @@ figure:hover figcaption{
     bottom: 28px;
 }
 .selector:last-child{
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-radius: 0 5px 5px 0;        
 }
 .selector:first-child{
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px 0 0 5px;
 }
 iframe{
     border: 0px;

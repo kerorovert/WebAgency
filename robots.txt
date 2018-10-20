@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+Sitemap: https://manuel-roggeri-tome.000webhostapp.com/sitemap.xml 
