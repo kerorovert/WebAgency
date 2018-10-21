@@ -10,7 +10,6 @@ body{
     margin: 0px auto;
     width: 100%;
     background-color: white;
-    min-width: 300px;
 }
 footer{
     max-width: 100%;
@@ -84,7 +83,7 @@ header{
     background-color: #fff;
     top: 0px;
     left: 0px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -358,12 +357,14 @@ li i{
             justify-content: center;
 }
 .works img{
-    max-width: 312px;
-    max-height: 210px;
+    max-width: 600px;
+    width: 20vw;
 }
 figure{
     position: relative;
     overflow: hidden;
+    max-width: 600px;
+    width: 20vw;
 }
 figcaption{
     position: absolute;
@@ -375,13 +376,14 @@ figcaption{
     -webkit-transition: opacity .5s;
          -o-transition: opacity .5s;
             transition: opacity .5s;
-    width: 100%;
+    max-width: 600px;
+    width: 20vw;
 }
 figure:hover figcaption{
     opacity: 1;
     -webkit-transition: opacity .5s;
-    -o-transition: opacity .5s;
-    transition: opacity .5s;
+         -o-transition: opacity .5s;
+            transition: opacity .5s;
 }
 .eye{
     color: white;
@@ -626,6 +628,11 @@ input, textarea{
     }
 }
 /*Media queries*/
+@media screen and (max-width: 1600px){
+    .works img, figure, figcaption{
+        width: 35vw;
+    }
+}
 @media screen and (max-width: 1023px){
     .logo{
         -webkit-animation: logo 0.5s forwards ease-in-out;
@@ -653,9 +660,6 @@ input, textarea{
         position: static;
         width: 100%;
         padding: 0px;
-        border: solid 1px grey;
-        border-radius: 5px;
-        padding: 20px 20px 25px 20px;
     }
     form a img{
         display: block;
@@ -672,6 +676,9 @@ input, textarea{
                 justify-content: center;
         text-align: justify;
         margin: 0 20px;
+    }
+    .works img, figure, figcaption{
+        width: 75vw;
     }
 }
 @media screen and (max-width: 520px){
