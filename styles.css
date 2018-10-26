@@ -340,10 +340,15 @@ input[type="radio"]:checked{
     color: #ffffff;
     background-color: rgb(204, 204, 204);
 }
-.selector:hover, input[type="radio"]:checked ~ .selector{
+input[type="radio"]:checked ~ .selector{
     background-color: #4EB1D5;
     -webkit-box-shadow: inset 0px -3px #4E8DAA;
             box-shadow: inset 0px -3px #4E8DAA;
+}
+.selector:hover{
+    background-color: #449aba;
+    -webkit-box-shadow: inset 0px -3px #41778e;
+            box-shadow: inset 0px -3px #41778e;
 }
 .selector:hover i, input[type="radio"]:checked ~ .selector i{
     visibility: visible;
@@ -352,6 +357,9 @@ li i{
     color: #4E8DAA;
     margin-bottom: -16px;
     visibility: hidden;
+}
+.selector:hover i{
+    color: #41778e;
 }
 .wraper{
     display: -webkit-box;
