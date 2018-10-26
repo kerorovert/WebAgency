@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
     font-family: Roboto,"Trebuchet MS",sans-serif;
@@ -107,6 +106,7 @@ header{
     -webkit-animation: logob 0.5s ease-in-out;
             animation: logob 0.5s ease-in-out;
 }
+/*Slider*/
 #sliderlow{
     margin-top: 65px;
     display: none;
@@ -238,6 +238,7 @@ header{
     width: 100%;
     z-index: 20;
 }
+/*Services*/
 #main-feature{
     height: 319px; 
     width: 510px;
@@ -273,6 +274,7 @@ header{
 #nosprojets > .circle{
     border: 4px solid #f6f6f6;
 }
+
 .icos{
     font-size: 2em;
     display: -webkit-box;
@@ -306,6 +308,16 @@ header{
 #contserv > p{
     min-height: 50px;
 }
+/*Portofolio*/
+input[type="radio"]{
+    display: none; 
+}
+input[type="radio"] + label{
+    cursor: pointer; 
+}
+input[type="radio"]:checked{
+    display: none
+}
 .selector{
     width: 125px;
     height: 32px;
@@ -328,17 +340,12 @@ header{
     color: #ffffff;
     background-color: rgb(204, 204, 204);
 }
-.selector:hover{
+.selector:hover, input[type="radio"]:checked ~ .selector{
     background-color: #4EB1D5;
     -webkit-box-shadow: inset 0px -3px #4E8DAA;
             box-shadow: inset 0px -3px #4E8DAA;
 }
-.selector:first-child{
-    background-color: #4EB1D5;
-    -webkit-box-shadow: inset 0px -3px #4E8DAA;
-            box-shadow: inset 0px -3px #4E8DAA;
-}
-.selector:hover i, .selector:first-child i{
+.selector:hover i, input[type="radio"]:checked ~ .selector i{
     visibility: visible;
 }
 li i{
@@ -396,12 +403,13 @@ figure:hover figcaption{
     right: 20px;
     bottom: 28px;
 }
-.selector:last-child{
+#wport > li:last-child > .selector{
     border-radius: 0 5px 5px 0;        
 }
-.selector:first-child{
+#wport > li:first-child > .selector{
     border-radius: 5px 0 0 5px;
 }
+/*Contact*/
 iframe{
     border: 0px;
     width: 100%;
@@ -440,14 +448,13 @@ form a img{
 form > p{
     color: grey;
 }
-input, textarea{
+form input, form textarea{
     background-color: #FFFFFF;
     border: 1px solid #999999;
     border-radius: 5px;
     font-size: 1em;
     padding: 5px;
 }
-
 /*Keyframes*/
 @-webkit-keyframes glisse{
     0%, 40%, 100% {
@@ -660,6 +667,9 @@ input, textarea{
         position: static;
         width: 100%;
         padding: 0px;
+    }
+    form input, form textarea{
+        width: 90%;
     }
     form a img{
         display: block;
