@@ -118,7 +118,7 @@ header{
             box-shadow: 0px 15px 30px 0px rgba(0,0,0,1);
 }
 .title{
-    background-image: url("webagency_images/images/animated-number/bg.jpg");
+    background-image: url("images/animated-number/bg.jpg");
     width: auto;
     color: white;
     -webkit-box-orient: vertical;
