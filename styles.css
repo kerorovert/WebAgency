@@ -665,7 +665,12 @@ form input, form textarea{
 
 @media screen and (max-width: 1600px){
     .works img, figure, figcaption{
-        width: 35vw;
+        width: 19vw;
+    }
+}
+@media screen and (max-width: 1340px){
+    .works img, figure, figcaption{
+        width: 17.1vw;
     }
 }
 @media screen and (max-width: 1023px){
@@ -702,6 +707,9 @@ form input, form textarea{
     form a img{
         display: block;
     }
+    .works img, figure, figcaption{
+        width: 30vw;
+    }
 }
 @media screen and (max-width: 680px){
     .icos, #main-feature{ 
@@ -716,7 +724,7 @@ form input, form textarea{
         margin: 0 20px;
     }
     .works img, figure, figcaption{
-        width: 75vw;
+        width: 80vw;
     }
 }
 @media screen and (max-width: 520px){
