@@ -39,7 +39,7 @@ form > h3{
     max-width: 80%
 }
 .space{
-    height: 79px;
+    height: 99px;
 }    
 .center{
     text-align: center;
@@ -135,7 +135,8 @@ header{
     height: 50px;
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: 225px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 100;
 }
 .fleche_gauche{
@@ -159,38 +160,37 @@ header{
     right: 10px;
 }
 .slider{
-    -webkit-animation: slider 0.5s forwards ease-in-out;
-            animation: slider 0.5s forwards ease-in-out;
-    height: 0px;
-    max-width: 1600px;
-    width: 100%;
     overflow: hidden;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 0 auto;
     margin-top: 99px;
-    margin-bottom: 0px;
-    position: relative;
-    -webkit-box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.1);
-            box-shadow: 0px 15px 30px 0px rgba(0,0,0,0.1);
+    -webkit-animation: slider .5s forwards ease-in-out;
+            animation: slider .5s forwards ease-in-out;
 }
-.slides{
-    height: 550px;
-    width: 3200px;
+.slider > figure{
+    position: relative;
+    width: 200%;
+    margin: 0;
+    left: 0;
     -webkit-animation: glisse 18s infinite ease-in-out;
             animation: glisse 18s infinite ease-in-out;
 }
-.slide{
+.slider > figure img{
+    height: auto;
+    width: 50%;
     float: left;
 }
-.texteslide {
+#texteslide, #texteslide2{
     position:absolute;
     color:white;
     font-size:16px;
-    width:500px;
-    margin-top: 150px;
-    margin-left: 5%;
+    width:18%;
+    margin-top: 8.5%;
+    transform: translateY(-50%);
+}
+#texteslide{
+    margin-left: 2.5%;
+}
+#texteslide2{
+    margin-left: 52.5%;
 }
 .textebleu, .icos{
     color: #4EB1D5;
@@ -214,6 +214,11 @@ header{
     -webkit-box-shadow: 0 4px 0 #4e8daa;
             box-shadow: 0 4px 0 #4e8daa;
     cursor: pointer;
+}
+.bouton:hover{
+    background: #449aba;
+    -webkit-box-shadow: 0 4px 0 #41778e;
+            box-shadow: 0 4px 0 #41778e;
 }
 .bouton:active{
      -webkit-box-shadow: 2px 2px 8px black inset, 
@@ -386,15 +391,16 @@ input[type="radio"]:checked ~ .selector i{
 }
 .works img{
     max-width: 600px;
-    width: 20vw;
+    width: 25vw;
+    width: 100%
 }
-figure{
+.works{
     position: relative;
     overflow: hidden;
     max-width: 600px;
     width: 20vw;
 }
-figcaption{
+.works figcaption{
     position: absolute;
     padding: 8px;
     bottom: 4px;
@@ -407,7 +413,7 @@ figcaption{
     max-width: 600px;
     width: 20vw;
 }
-figure:hover figcaption{
+.wraper > figure:hover figcaption{
     opacity: 1;
     -webkit-transition: opacity .5s;
          -o-transition: opacity .5s;
@@ -482,8 +488,8 @@ form input, form textarea{
                 transform: translateX(0);
     }
     50%, 90% {
-        -webkit-transform: translateX(-1600px);
-                transform: translateX(-1600px);
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
 }
 @keyframes glisse{
@@ -492,8 +498,8 @@ form input, form textarea{
                 transform: translateX(0);
     }
     50%, 90% {
-        -webkit-transform: translateX(-1600px);
-                transform: translateX(-1600px);
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
     }
 }
 @-webkit-keyframes timeliner{
@@ -606,26 +612,22 @@ form input, form textarea{
 }
 @-webkit-keyframes slider{
     from{
-        height: 0px;
         -webkit-transform: translateY(-34px);
                 transform: translateY(-34px);
     }
     to{
         -webkit-transform: translateY(0px);
                 transform: translateY(0px);
-        height: 550px;   
     }
 }
 @keyframes slider{
     from{
-        height: 0px;
         -webkit-transform: translateY(-34px);
                 transform: translateY(-34px);
     }
     to{
         -webkit-transform: translateY(0px);
-                transform: translateY(0px);
-        height: 550px;   
+                transform: translateY(0px);  
     }
 }
 @-webkit-keyframes logo{
@@ -664,16 +666,19 @@ form input, form textarea{
 /*Media queries*/
 
 @media screen and (max-width: 1600px){
-    .works img, figure, figcaption{
+    .works img, .works figcaption, .works{
         width: 19vw;
     }
 }
 @media screen and (max-width: 1340px){
-    .works img, figure, figcaption{
+    .works img, .works figcaption, .works{
         width: 17.1vw;
     }
 }
 @media screen and (max-width: 1023px){
+    .works img, .works figcaption, .works{
+        width: 40vw;
+    }
     .logo{
         -webkit-animation: logo 0.5s forwards ease-in-out;
                 animation: logo 0.5s forwards ease-in-out;
@@ -707,10 +712,6 @@ form input, form textarea{
     form a img{
         display: block;
     }
-    .works img, figure, figcaption{
-        width: 30vw;
-    }
-}
 @media screen and (max-width: 680px){
     .icos, #main-feature{ 
         display: none;
@@ -723,8 +724,8 @@ form input, form textarea{
         text-align: justify;
         margin: 0 20px;
     }
-    .works img, figure, figcaption{
-        width: 80vw;
+    .works img, .works figcaption, .works{
+        width: 75vw;
     }
 }
 @media screen and (max-width: 520px){
