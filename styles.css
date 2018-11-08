@@ -326,14 +326,23 @@ header{
 input[type="radio"]{
     display: none; 
 }
-input[type="radio"] + label{
+label.selector{
     cursor: pointer; 
 }
-input[type="radio"]:checked{
-    display: none
+input[type="radio"][id="allworks"]:checked ~ .wraper .works{
+    display: block;
 }
-input[type="radio"][id="allworks"]:checked ~ .works{
-    display: none;
+input[type="radio"][id="creative"]:checked ~ .wraper .creative{
+    display: block;
+}
+input[type="radio"][id="corporate"]:checked ~ .wraper .corporate{
+    display: block;
+}
+input[type="radio"][id="portofolio"]:checked ~ .wraper .portofolio{
+    display: block;
+}
+#wport{
+    width: 100%;
 }
 .selector{
     width: 125px;
@@ -357,7 +366,7 @@ input[type="radio"][id="allworks"]:checked ~ .works{
     color: #fff;
     background-color: #ccc;
 }
-.selector:hover{
+label:hover{
     background-color: #b2b2b2;
 }
 li i{
@@ -365,24 +374,30 @@ li i{
     margin-bottom: -16px;
     visibility: hidden;
 }
-.selector:hover i{
+label:hover i{
     color: #41778e;
 }
-input[type="radio"]:checked ~ .selector{
+input[type="radio"][id="allworks"]:checked ~ ul > li > .selector[for="allworks"], 
+input[type="radio"][id="creative"]:checked ~ ul > li > .selector[for="creative"],
+input[type="radio"][id="corporate"]:checked ~ ul > li > .selector[for="corporate"],
+input[type="radio"][id="portofolio"]:checked ~ ul > li > .selector[for="portofolio"]{
     background-color: #4EB1D5;
     -webkit-box-shadow: inset 0px -3px #4E8DAA;
             box-shadow: inset 0px -3px #4E8DAA;
 }
-input[type="radio"]:checked ~ .selector:hover{
+input[type="radio"][id="allworks"]:checked ~ ul > li > .selector[for="allworks"]:hover,
+input[type="radio"][id="creative"]:checked ~ ul > li > .selector[for="creative"]:hover,
+input[type="radio"][id="corporate"]:checked ~ ul > li > .selector[for="corporate"]:hover,
+input[type="radio"][id="portofolio"]:checked ~ ul > li > .selector[for="portofolio"]:hover{
     background-color: #449aba;
     -webkit-box-shadow: inset 0px -3px #41778e;
             box-shadow: inset 0px -3px #41778e;
 }
-input[type="radio"]:checked ~ .selector i{
+input[type="radio"][id="allworks"]:checked ~ ul > li > .selector[for="allworks"] i,
+input[type="radio"][id="creative"]:checked ~ ul > li > .selector[for="creative"] i,
+input[type="radio"][id="corporate"]:checked ~ ul > li > .selector[for="corporate"] i,
+input[type="radio"][id="portofolio"]:checked ~ ul > li > .selector[for="portofolio"] i{
     visibility: visible;
-}
-#allworks:checked ~ li{
-   display: none;
 }
 .wraper{
     display: -webkit-box;
@@ -396,7 +411,7 @@ input[type="radio"]:checked ~ .selector i{
 }
 .works img{
     max-width: 600px;
-    width: 23vw;
+    width: 21vw;
     width: 100%;
 }
 .works{
@@ -404,7 +419,8 @@ input[type="radio"]:checked ~ .selector i{
     position: relative;
     overflow: hidden;
     max-width: 600px;
-    width: 23vw;
+    width: 21vw;
+    display: none;
 }
 .works figcaption{
     position: absolute;
@@ -417,7 +433,7 @@ input[type="radio"]:checked ~ .selector i{
          -o-transition: opacity .5s;
             transition: opacity .5s;
     max-width: 600px;
-    width: 23vw;
+    width: 21vw;
 }
 .wraper > figure:hover figcaption{
     opacity: 1;
@@ -436,10 +452,10 @@ input[type="radio"]:checked ~ .selector i{
     right: 20px;
     bottom: 28px;
 }
-#wport > li:last-child > .selector{
+#wport > li:last-child > label{
     border-radius: 0 5px 5px 0;        
 }
-#wport > li:first-child > .selector{
+#wport > li:first-child > label{
     border-radius: 5px 0 0 5px;
 }
 /*Contact*/
@@ -674,7 +690,7 @@ form input, form textarea{
 /*Media queries*/
 @media screen and (max-width: 1023px){
     .works img, .works figcaption, .works{
-        width: 22vw;
+        width: 21vw;
     }
     .logo{
         -webkit-animation: logo 0.5s forwards ease-in-out;
@@ -727,7 +743,7 @@ form input, form textarea{
         margin: 0 20px;
     }
     .works img, .works figcaption, .works{
-        width: 45vw;
+        width: 40vw;
     }
 }
 @media screen and (max-width: 520px){
@@ -740,16 +756,16 @@ form input, form textarea{
         -ms-flex-align: center;
             align-items: center;
     }
-    #wport > li:first-child > .selector{
+    #wport > li:first-child > label{
         border-radius: 5px 5px 0px 0px;
     }
-    #wport > li:last-child > .selector{  
+    #wport > li:last-child > label{  
         border-radius: 0px 0px 5px 5px;
     }
-    #wport > li > .selector i, #wport > li:first-child > .selector i{
+    #wport > li > label i, #wport > li:first-child > label i{
     visibility: hidden;
     }
     .works img, .works figcaption, .works{
-        width: 95vw;
+        width: 90vw;
     }  
 }
