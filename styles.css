@@ -332,6 +332,9 @@ input[type="radio"] + label{
 input[type="radio"]:checked{
     display: none
 }
+input[type="radio"][id="allworks"]:checked ~ .works{
+    display: none;
+}
 .selector{
     width: 125px;
     height: 32px;
