@@ -323,10 +323,10 @@ header{
 
 /*Portofolio*/
 
-/*input[type="radio"]{
+input[type="radio"]{
     display: none; 
-}*/
-input[type="radio"] + label{
+}
+label.selector{
     cursor: pointer; 
 }
 input[type="radio"][id="allworks"]:checked ~ .wraper .works{
@@ -377,25 +377,28 @@ li i{
 label:hover i{
     color: #41778e;
 }
-
-
-
-input[type="radio"][id="allworks"]:checked ~ ul li .selectors[for="allworks"]{
+input[type="radio"][id="allworks"]:checked ~ ul > li > .selector[for="allworks"], 
+input[type="radio"][id="creative"]:checked ~ ul > li > .selector[for="creative"],
+input[type="radio"][id="corporate"]:checked ~ ul > li > .selector[for="corporate"],
+input[type="radio"][id="portofolio"]:checked ~ ul > li > .selector[for="portofolio"]{
     background-color: #4EB1D5;
     -webkit-box-shadow: inset 0px -3px #4E8DAA;
             box-shadow: inset 0px -3px #4E8DAA;
 }
-input[type="radio"]:checked ~ label:hover{
+input[type="radio"][id="allworks"]:checked ~ ul > li > .selector[for="allworks"]:hover,
+input[type="radio"][id="creative"]:checked ~ ul > li > .selector[for="creative"]:hover,
+input[type="radio"][id="corporate"]:checked ~ ul > li > .selector[for="corporate"]:hover,
+input[type="radio"][id="portofolio"]:checked ~ ul > li > .selector[for="portofolio"]:hover{
     background-color: #449aba;
     -webkit-box-shadow: inset 0px -3px #41778e;
             box-shadow: inset 0px -3px #41778e;
 }
-input[type="radio"]:checked ~ label i{
+input[type="radio"][id="allworks"]:checked ~ ul > li > .selector[for="allworks"] i,
+input[type="radio"][id="creative"]:checked ~ ul > li > .selector[for="creative"] i,
+input[type="radio"][id="corporate"]:checked ~ ul > li > .selector[for="corporate"] i,
+input[type="radio"][id="portofolio"]:checked ~ ul > li > .selector[for="portofolio"] i{
     visibility: visible;
 }
-
-
-
 .wraper{
     display: -webkit-box;
     display: -ms-flexbox;
