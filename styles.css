@@ -320,7 +320,7 @@ header{
             transform: translate(20%,50%);
 }
 #contserv{
-    max-width: 670px;
+    max-width: 650px;
     overflow: hidden;
 }
 #contserv > p{
