@@ -108,7 +108,6 @@ header{
     -webkit-animation: logob 0.5s ease-in-out;
             animation: logob 0.5s ease-in-out;
 }
-
 /*Slider*/
 
 #sliderlow{
@@ -136,7 +135,9 @@ header{
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     z-index: 100;
 }
 .fleche_gauche{
@@ -186,7 +187,9 @@ header{
     font-size:16px;
     width:18%;
     margin-top: 8.5%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 #texteslide{
     margin-left: 2.5%;
@@ -252,8 +255,9 @@ header{
 }
 /*Services*/
 #main-feature{
-    height: 319px; 
-    width: 510px;
+    height: 319px;
+    width: 375px;
+    margin: 0px 50px 0px 100px;
 }
 .twolines:before{
     position: absolute;
@@ -297,10 +301,11 @@ header{
         -ms-flex-direction: column; 
             flex-direction: column; 
     float: left; 
-    margin: 30px;
+    margin: 25px 30px 45px 30px;
     padding: 10px;
     border: 1px solid #D7DADB;
     border-radius: 50%;
+
 }
 .icos :after{    
     content: "";
@@ -315,7 +320,8 @@ header{
             transform: translate(20%,50%);
 }
 #contserv{
-    max-width: 770px;
+    max-width: 670px;
+    overflow: hidden;
 }
 #contserv > p{
     min-height: 50px;
@@ -329,15 +335,9 @@ input[type="radio"]{
 label.selector{
     cursor: pointer; 
 }
-input[type="radio"][id="allworks"]:checked ~ .wraper .works{
-    display: block;
-}
-input[type="radio"][id="creative"]:checked ~ .wraper .creative{
-    display: block;
-}
-input[type="radio"][id="corporate"]:checked ~ .wraper .corporate{
-    display: block;
-}
+input[type="radio"][id="allworks"]:checked ~ .wraper .works,
+input[type="radio"][id="creative"]:checked ~ .wraper .creative,
+input[type="radio"][id="corporate"]:checked ~ .wraper .corporate,
 input[type="radio"][id="portofolio"]:checked ~ .wraper .portofolio{
     display: block;
 }
@@ -527,20 +527,12 @@ form input, form textarea{
     }
 }
 @-webkit-keyframes timeliner{
-    0%, 40.0001%, 50%, 90.0001%, 100% { 
-        width: 0; 
-    }
-    40%, 90% { 
-        width: 100%; 
-    }
+    0%, 40.0001%, 50%, 90.0001%, 100% {width: 0;}
+    40%, 90% {width: 100%;}
 }
 @keyframes timeliner{
-    0%, 40.0001%, 50%, 90.0001%, 100% { 
-        width: 0; 
-    }
-    40%, 90% { 
-        width: 100%; 
-    }
+    0%, 40.0001%, 50%, 90.0001%, 100% {width: 0;}
+    40%, 90% {width: 100%;}
 }
 @-webkit-keyframes upline{
     from{
@@ -563,36 +555,20 @@ form input, form textarea{
     }
 }
 @-webkit-keyframes header{
-    from{
-        height: 99px;
-    }
-    to{
-        height: 65px;   
-    }
+    from{height: 99px;}
+    to{height: 65px;}
 }
 @keyframes header{
-    from{
-        height: 99px;
-    }
-    to{
-        height: 65px;   
-    }
+    from{height: 99px;}
+    to{height: 65px;}
 }
 @-webkit-keyframes headerb{
-    from{
-        height: 65px;
-    }
-    to{
-        height: 99px;   
-    }
+    from{height: 65px;}
+    to{height: 99px;}
 }
 @keyframes headerb{
-    from{
-        height: 65px;
-    }
-    to{
-        height: 99px;   
-    }
+    from{height: 65px;}
+    to{height: 99px;}
 }
 @-webkit-keyframes navb{
     from{
@@ -655,40 +631,42 @@ form input, form textarea{
     }
 }
 @-webkit-keyframes logo{
-    from{
-        margin-right: 50%;
-    }
-    to{
-        margin: 0;
-    }
+    from{margin-right: 50%;}
+    to{margin: 0;}
 }
 @keyframes logo{
-    from{
-        margin-right: 50%;
-    }
-    to{
-        margin: 0;
-    }
+    from{margin-right: 50%;}
+    to{margin: 0;}
 }
 @-webkit-keyframes logob{
-    from{
-        margin: 0;
-    }
-    to{
-        margin-right: 50%;
-    }
+    from{margin: 0;}
+    to{margin-right: 50%;}
 }
 @keyframes logob{
-    from{
-        margin: 0;
-    }
-    to{
-        margin-right: 50%;
+    from{margin: 0;}
+    to{margin-right: 50%;}
+}
+/*Media queries*/
+@media screen and (max-width: 1220px){
+    #main-feature{
+        height: 298px;
+        width: 350px;
+        margin: 25px 0px;
     }
 }
-
-/*Media queries*/
 @media screen and (max-width: 1023px){
+    #main-feature{
+        height: 319px;
+        width: 375px;
+        margin: 0px;
+    }
+    #contserv{
+        max-width: 940px;
+        margin: 0px 50px;
+    }
+    .icos{
+        margin: 25px 30px 35px 30px;
+    }
     .works img, .works figcaption, .works{
         width: 21vw;
     }
@@ -725,9 +703,13 @@ form input, form textarea{
     form a img{
         display: block;
     }
+}
 @media screen and (max-width: 768px){    
     .works img, .works figcaption, .works{
         width: 45vw;
+    }
+    #contserv{
+        margin: 0px;
     }
 }
 @media screen and (max-width: 680px){
@@ -763,9 +745,9 @@ form input, form textarea{
         border-radius: 0px 0px 5px 5px;
     }
     #wport > li > label i, #wport > li:first-child > label i{
-    visibility: hidden;
+        visibility: hidden;
     }
     .works img, .works figcaption, .works{
         width: 90vw;
-    }  
+    }
 }
